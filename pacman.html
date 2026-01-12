@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pac-Man</title>
+    <style>
+      #gameCanvas {
+        box-shadow: 10px 10px 10px blue;
+      }
+      @font-face {
+        font-family: ultraFont;
+        src: url(VCR_OSD_MONO_1.001.ttf);
+      }
+      h1 {
+        text-align: center;
+        font-family: ultraFont;
+        color: yellow;
+      }
+      h2 {
+        font-family: ultraFont;
+        font-size: large;
+        color: white;
+      }
+      body {
+        display: flex;
+        justify-content: center;
+        overflow: hidden;
+        height: 100vh;
+        background-color: black;
+      }
+      #score {
+        text-align: start;
+      }
+      #lives {
+        text-align: end;
+      }
+      #info {
+        display: grid;
+        grid-template-columns: 30% 20% 50%;
+      }
+      #hint {
+        text-align: center;
+      }
+      #bonus {
+        text-align: start;
+        color: pink;
+      }
+
+    </style>
+  </head>
+  <body>
+    <div>
+
+      <h1>Pac-Man</h1>
+      <h2 id="hint">Use the arrow keys to move!</h2>
+
+      <div id="info">
+        <h2 id="score">Score: 0</h2>
+        <h2 id="bonus"></h2>
+        <h2 id="lives">Lives: 3</h2>
+      </div>
+
+      <canvas id="gameCanvas"></canvas>
+    </div>
+    <script type="text/javascript" src="src/astar.js"></script>
+    <script src="src/script.js"></script>
+  </body>
+</html>
