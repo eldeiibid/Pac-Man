@@ -10,6 +10,7 @@ Fecha: 27/12/2025
 
 *********************************************************************
 Recursos de audio obtenidos de: https://sounds.spriters-resource.com/arcade/pacman/asset/404131/
+NOTA IMPORTANTE: Para escuchar el audio se debe permitir la reproducción de audio en el navegador.
 
 *********************************************************************
 */
@@ -278,7 +279,6 @@ class Pacman {
 
       combo += 2;
       score += combo * 100;
-      clearTimeout(hideBonusUI);
       showBonusUI(combo * 100);
 
       // sonido
@@ -1773,6 +1773,7 @@ function endAudio() {
 
 function showBonusUI(points) {
   bonus.innerHTML = "+" + points;
+  clearTimeout(hideBonusUI);
   setTimeout(hideBonusUI, 1000);
 }
 
